@@ -47,6 +47,17 @@
                 },
                 {
                     "name": "",
+                    "id": "f22394d3-57f3-402b-bd65-9607394665d4",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "f45cac43-00e1-4f55-ad51-5734f827e1c8",
                     "path": "<Keyboard>/escape",
                     "interactions": "",

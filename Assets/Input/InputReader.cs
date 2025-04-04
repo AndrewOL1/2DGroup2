@@ -38,6 +38,7 @@ namespace Input
 
         public event Action<Vector2> LookEvent;
         public event Action InteractEvent;
+        public event Action InteractEventCancelled;
         # endregion
         public void OnResume(InputAction.CallbackContext context)
         {
@@ -49,6 +50,11 @@ namespace Input
         public void OnInteract(InputAction.CallbackContext context)
         {
             if (context.phase != InputActionPhase.Performed) return;
+            InteractEvent?.Invoke();
+        }
+        public void OnInteractCancelled(InputAction.CallbackContext context)
+        {
+            if (context.phase != InputActionPhase.Canceled) return;
             InteractEvent?.Invoke();
         }
 

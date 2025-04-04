@@ -6,7 +6,7 @@ namespace Inventory
 {
     public class InventoryManager : MonoBehaviour
     {
-        private InventoryItem[] _items; 
+        private InventoryItem[] _items;  
         [SerializeField] private GameObject itemWidget;
         [SerializeField] private InventoryItem item;
         [SerializeField] private GameObject inventoryBackground;
@@ -32,7 +32,7 @@ namespace Inventory
             UpdateWidget(item, temp);
             _inventoryCount++;
         }
-
+        //need a check when loading scene to unload pickup if we are holding it
         private void UpdateWidget(InventoryItem item,GameObject temp)
         {
             temp.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = item.Name;//maybe display name on hover over
