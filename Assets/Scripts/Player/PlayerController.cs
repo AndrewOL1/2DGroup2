@@ -27,8 +27,6 @@ namespace Player
        StateMachine _stateMachine;
        public PlayerLocomotion PlayerLocomotion;
        public bool triggerDialogue;
-
-       [SerializeField] private Rigidbody rb;
        [SerializeField] private Input.InputReader inputReader;
        public PlayerConfiguration playerData;
        [SerializeField] private Animator animator;
@@ -50,11 +48,11 @@ namespace Player
            _stateMachine = new StateMachine();
            _states = new StateCollection(this,animator,playerData);
            InputProcessor = new PlayerInputProcessor(inputReader);
-           PlayerLocomotion = new PlayerLocomotion(rb, playerData);
+           PlayerLocomotion = new PlayerLocomotion(playerData);
            //playerCollision.SetPlayerLocomotion(PlayerLocomotion);
            //define transitions
            //At(_states.LocomotionState,_states.JumpState, new FuncPredicate(()=> InputProcessor.IsJumping&&playerCollision.coyoteTimer>=0));
-           
+           At(_states.IdleState,_states.DialogueState, new FuncPredicate(()=> InputProcessor.IsJumping));
            
            //inital state
            _stateMachine.SetState(_states.IdleState);
@@ -66,10 +64,6 @@ namespace Player
        private void Update()
        {
            _stateMachine.Update();
-           if(!PlayerLocomotion.rightDirection)
-               _spriteRenderer.flipX = true;
-           else
-               _spriteRenderer.flipX = false;
        }
        private void FixedUpdate()
        {

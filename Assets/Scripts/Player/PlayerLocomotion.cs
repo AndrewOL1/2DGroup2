@@ -15,9 +15,8 @@ namespace Player
         //public DialogueTrigger interactingObject;
         
         #endregion
-        public PlayerLocomotion(Rigidbody rb, PlayerConfiguration playerconfig)
+        public PlayerLocomotion( PlayerConfiguration playerconfig)
         {
-            this.rb = rb;
             this.playerconfig = playerconfig;
         }
 

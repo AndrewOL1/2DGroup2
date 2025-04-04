@@ -1,3 +1,4 @@
+using Inventory;
 using UnityEngine;
 
 namespace Player
@@ -13,7 +14,7 @@ namespace Player
         public GameObject interactionObject;
         [Header("lastCheckpoint")]
         public Vector3 lastCheckpoint;
-        public float RespawnTime;
-        public bool IsDead;
+        [Header("ItemSlots")]
+        public InventoryItem[] itemSlots;
     }
 }
