@@ -7,7 +7,7 @@ namespace SceneManagement
 {
     public class SceneTransition : MonoBehaviour
     { 
-        private string selectedScene;
+        [SerializeField]private string selectedScene;
         public string SelectedScene => selectedScene;
         [SerializeField]
         public SceneList sceneList;

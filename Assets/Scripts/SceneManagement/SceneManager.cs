@@ -25,7 +25,14 @@ namespace SceneManagement
 
         public void LoadNextScene(string sceneName)
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+            try
+            {
+                UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+            }
+            catch (System.Exception e)
+            {
+                Debug.Log("Rebuild Scene object. Tools/get scene list");
+            }
         }
 
         private static void FindSceneObjects()
