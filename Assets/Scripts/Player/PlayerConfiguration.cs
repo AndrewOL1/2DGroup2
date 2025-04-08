@@ -16,5 +16,7 @@ namespace Player
         public Vector3 lastCheckpoint;
         [Header("ItemSlots")]
         public InventoryItem[] itemSlots;
+
+        [Header("ItemState")] public int id;
     }
 }
