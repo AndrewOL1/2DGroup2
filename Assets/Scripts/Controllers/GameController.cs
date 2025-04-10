@@ -12,6 +12,7 @@ public class GameController : MonoBehaviour
     //public BackgroundController backgroundController;
     [SerializeField]
     private InputReader _input;
+    private 
     bool _isInteracting = false,_delay=false,isDialogueOpen=false;
     public static GameController Instance { get; private set; }
 
@@ -98,6 +99,7 @@ public class GameController : MonoBehaviour
                     else
                     {
                         bottomBar.PlayNextSentence();
+                        
                     }
                 }
                 _delay = true;
