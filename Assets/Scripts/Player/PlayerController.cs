@@ -60,7 +60,12 @@ namespace Player
            At(_states.IdleState,_states.LetterState, new FuncPredicate(()=> itemId==1));
            At(_states.IdleState,_states.KeyState, new FuncPredicate(()=> itemId==2));
            At(_states.IdleState,_states.CogState, new FuncPredicate(()=> itemId==3));
-           
+           At(_states.KeyState,_states.LetterState, new FuncPredicate(()=> itemId==1));
+           At(_states.CogState,_states.LetterState, new FuncPredicate(()=> itemId==1));
+           At(_states.LetterState,_states.KeyState, new FuncPredicate(()=> itemId==2));
+           At(_states.CogState,_states.KeyState, new FuncPredicate(()=> itemId==2));
+           At(_states.LetterState,_states.CogState, new FuncPredicate(()=> itemId==3));
+           At(_states.KeyState,_states.CogState, new FuncPredicate(()=> itemId==3));
            At(_states.LetterState,_states.IdleState, new FuncPredicate(()=> itemId==0));
            At(_states.KeyState,_states.IdleState, new FuncPredicate(()=> itemId==0));
            At(_states.CogState,_states.IdleState, new FuncPredicate(()=> itemId==0));
@@ -89,8 +94,11 @@ namespace Player
                itemId = 0;
                playerData.id = 0;
            }
-           itemId = id;
-           playerData.id = id;
+           else
+           {
+               itemId = id;
+               playerData.id = id;
+           }
        }
     }
 }

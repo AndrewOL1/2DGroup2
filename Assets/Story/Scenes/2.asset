@@ -18,3 +18,5 @@ MonoBehaviour:
   background: {fileID: 21300000, guid: 82616faedce36ab4dbad3adbacb2cf63, type: 3}
   nextScene: {fileID: 0}
   sceneName: Test1
+  loadNewScene: 0
+  EndConversation: 1
