@@ -13,6 +13,7 @@ public class Lock : MonoBehaviour
         if(keyID==ID)
         {
             //open object visual component
+            Debug.Log("Lock opened");
             GameController.Instance.StartDialogue(dialogue);
 
         }

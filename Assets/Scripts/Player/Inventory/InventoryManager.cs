@@ -36,6 +36,7 @@ namespace Inventory
             _itemDictionary.Add(id, name);
             GameObject temp = Instantiate(itemWidget, inventoryBackground.transform, true);
             UpdateWidget(item, temp);
+            temp.GetComponent<InventoryWidget>().id = id;
             _inventoryCount++;
         }
         //need a check when loading scene to unload pickup if we are holding it
