@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51fb4c6070f247e48b4377b5728b8182, type: 3}
+  m_Name: Bedroom
+  m_EditorClassIdentifier: 
+  sentences:
+  - text: " \u201CSo I guess this is where I\u2019ll be sleeping. It\u2019s not exactly
+      what I imagined.\u201D"
+    speaker: {fileID: 11400000, guid: 226d2a0055887a6498a5078f609a6163, type: 2}
+  - text: " \u201CI wonder what this room was used for before it was repurposed\u201D"
+    speaker: {fileID: 11400000, guid: 226d2a0055887a6498a5078f609a6163, type: 2}
+  - text: " \u201CIt could make for a nice study room one day.\u201D"
+    speaker: {fileID: 11400000, guid: 226d2a0055887a6498a5078f609a6163, type: 2}
+  - text: " \u201CThis is your room. I'll come to clean it every Sunday evening at
+      5. Also it\u2019s best if you're not up after dark. If you need anything just
+      call for me and I\u2019ll be there.\u201D"
+    speaker: {fileID: 11400000, guid: 755db819ff1a2ea4aa12594b5b3997b8, type: 2}
+  - text: " \u201CWhat\u2019s wrong with being up after dark?\u201D"
+    speaker: {fileID: 11400000, guid: 226d2a0055887a6498a5078f609a6163, type: 2}
+  - text: " \u201CHave a good night.\u201D *leaves*"
+    speaker: {fileID: 11400000, guid: 755db819ff1a2ea4aa12594b5b3997b8, type: 2}
+  - text: "\u201CWell that was strange. I\u2019m not too sure how I feel about this
+      place\u201D "
+    speaker: {fileID: 11400000, guid: 226d2a0055887a6498a5078f609a6163, type: 2}
+  background: {fileID: 21300000, guid: 82616faedce36ab4dbad3adbacb2cf63, type: 3}
+  nextScene: {fileID: 0}
+  sceneName: Test1
+  loadNewScene: 0
+  EndConversation: 0

@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51fb4c6070f247e48b4377b5728b8182, type: 3}
+  m_Name: Inside Mansion
+  m_EditorClassIdentifier: 
+  sentences:
+  - text: '*You enter the mansion, everything is seemingly normal. Everything has
+      been kept tidy since the owner''s passing. It seems as though the butler has
+      been here doing his job by himself.* '
+    speaker: {fileID: 11400000, guid: 4028f3f41069cdd46a994845bdd58d73, type: 2}
+  - text: '*The happiness you feel gets mixed into a grey colorless emotion with
+      the foreboding nature of the mansion, you get the feeling that something went
+      wrong here but your not exactly sure what*'
+    speaker: {fileID: 11400000, guid: 4028f3f41069cdd46a994845bdd58d73, type: 2}
+  - text: "\u201Cfeel free to take a look around your area is upstairs to the left.
+      Be careful the steps are getting old and they need to be replaced.\u201D "
+    speaker: {fileID: 11400000, guid: 755db819ff1a2ea4aa12594b5b3997b8, type: 2}
+  - text: "\u201CI appreciate it, I've never been in a house this big before. It
+      must be a pain to keep clean all by yourself.\u201D"
+    speaker: {fileID: 11400000, guid: 226d2a0055887a6498a5078f609a6163, type: 2}
+  - text: "\u201CYou don't have to worry about that, I have my ways\u2026 anyways
+      you should get going now it's getting late.\u201D"
+    speaker: {fileID: 11400000, guid: 755db819ff1a2ea4aa12594b5b3997b8, type: 2}
+  background: {fileID: 21300000, guid: 82616faedce36ab4dbad3adbacb2cf63, type: 3}
+  nextScene: {fileID: 0}
+  sceneName: Test1
+  loadNewScene: 0
+  EndConversation: 0

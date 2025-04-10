@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51fb4c6070f247e48b4377b5728b8182, type: 3}
+  m_Name: UsedCog
+  m_EditorClassIdentifier: 
+  sentences:
+  - text: You dust the cog off and press it firmly back into its place on the clock,
+      It makes a satisfying clink as it shifts back into place and the clock begins
+      to work once again. Moments later a key falls down and lands on the ground.
+    speaker: {fileID: 11400000, guid: 4028f3f41069cdd46a994845bdd58d73, type: 2}
+  background: {fileID: 21300000, guid: 82616faedce36ab4dbad3adbacb2cf63, type: 3}
+  nextScene: {fileID: 0}
+  sceneName: Test1
+  loadNewScene: 0
+  EndConversation: 0
