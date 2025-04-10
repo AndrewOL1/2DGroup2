@@ -18,7 +18,12 @@ namespace DialogueTriggers
 
             if (OnSceneEnter)
             {
-                GameController.Instance.StartDialogue(startingDialogue);
+                if (!PlayerPrefs.HasKey(startingDialogue.name))
+                {
+                    GameController.Instance.StartDialogue(startingDialogue);
+                    PlayerPrefs.SetInt(startingDialogue.name, 1);
+                    PlayerPrefs.Save();
+                }
             }
         }
 

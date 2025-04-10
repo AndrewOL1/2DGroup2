@@ -21,6 +21,7 @@ public class GameController : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(this.gameObject);
+            PlayerPrefs.DeleteAll();
         }
         else if (Instance != this)
             Destroy(gameObject);
