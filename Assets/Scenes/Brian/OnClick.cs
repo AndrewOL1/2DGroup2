@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Inventory;
 
 public class MouseClickSound : MonoBehaviour
 {
@@ -8,14 +9,16 @@ public class MouseClickSound : MonoBehaviour
 
     void Start()
     {
-        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource = InventoryManager.Instance.gameObject.GetComponent<AudioSource>();
     }
 
     void Update()
     {
-        if (Mouse.current.leftButton.wasPressedThisFrame) // Left mouse button
-        {
-            audioSource.PlayOneShot(clickSound);
-        }
+        
+        //audioSource.PlayOneShot(clickSound);
+    }
+    public void playSound()
+    {
+        audioSource.PlayOneShot(clickSound);
     }
 }

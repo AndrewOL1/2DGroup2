@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 134229240}
   - component: {fileID: 134229239}
   - component: {fileID: 134229238}
+  - component: {fileID: 134229243}
   m_Layer: 0
   m_Name: Door1 (1)
   m_TagString: Untagged
@@ -257,6 +258,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &134229243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134229237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24ed4e5e58d5e4f4499c6888f065dc49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound: {fileID: 8300000, guid: 6edcb79680ffbac41801c275f3ecac61, type: 3}
 --- !u!1 &436650078
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,6 +501,7 @@ GameObject:
   - component: {fileID: 1150086484}
   - component: {fileID: 1150086489}
   - component: {fileID: 1150086490}
+  - component: {fileID: 1150086491}
   m_Layer: 0
   m_Name: Door1
   m_TagString: Untagged
@@ -609,6 +624,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highlightColor: {r: 0.81620044, g: 0.8301887, b: 0.53648984, a: 0.7372549}
+--- !u!114 &1150086491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1150086483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24ed4e5e58d5e4f4499c6888f065dc49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound: {fileID: 8300000, guid: 6edcb79680ffbac41801c275f3ecac61, type: 3}
 --- !u!1 &1812258663
 GameObject:
   m_ObjectHideFlags: 0
@@ -706,6 +734,7 @@ GameObject:
   - component: {fileID: 1822520326}
   - component: {fileID: 1822520325}
   - component: {fileID: 1822520324}
+  - component: {fileID: 1822520329}
   m_Layer: 0
   m_Name: Door1 (2)
   m_TagString: Untagged
@@ -828,6 +857,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1822520329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822520323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24ed4e5e58d5e4f4499c6888f065dc49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound: {fileID: 8300000, guid: 6edcb79680ffbac41801c275f3ecac61, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

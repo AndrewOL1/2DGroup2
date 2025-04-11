@@ -28,14 +28,6 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: cc6ed646c04950046bb3796820112586, type: 2}
   - text: "\u201CWhat? Who gave you this again?\u201D"
     speaker: {fileID: 11400000, guid: 226d2a0055887a6498a5078f609a6163, type: 2}
-  - text: "LAST WILL  AND  TESTAMENT of Arden Emmett Azelhart  \u201CI hereby declare
-      that this is my last will and testament and that I hereby revoke, cancel and
-      annul all wills and codicils previously made by me either jointly or severally.
-      I hereby declare all assets to be transferred to Primrose Azelhart of Concord,
-      Massachusetts. I declare that I am of legal age to make this will and of sound
-      mind and that this last will and testament expresses my wishes without undue
-      influence or duress.\u201D "
-    speaker: {fileID: 11400000, guid: cc6ed646c04950046bb3796820112586, type: 2}
   - text: " \u201CI didn\u2019t ask, I am sorry, what does it say?\u201D"
     speaker: {fileID: 11400000, guid: eddfe009b49d3484d8dfb5498d6a2f17, type: 2}
   - text: " \u201CNothing\u2026 I have to go\u2026\u201D"

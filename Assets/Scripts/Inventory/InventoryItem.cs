@@ -10,16 +10,20 @@ namespace Inventory
         public int ID;
         public string Name;
         private DialogueTrigger _dialogueTrigger;
-
+        private MouseClickSound sound;
         private void Start()
         {
             if(InventoryManager.Instance.CheckIfInInventory(ID))
                 this.gameObject.SetActive(false);
             _dialogueTrigger = GetComponent<DialogueTrigger>();
+            
+                sound = GetComponent<MouseClickSound>();
+            
         }
 
         private void OnMouseDown()
         {
+            sound.playSound();
             //check player state and decide to interact or pick up
             InventoryManager.Instance.AddItemToInventory(this,ID,Name);//might need to set it to send its prefab so i can be spawned again
             _dialogueTrigger.PlayInteractDialogue();

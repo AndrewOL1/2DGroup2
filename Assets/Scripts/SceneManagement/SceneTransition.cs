@@ -3,6 +3,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using UnityEditor;
 
+
 namespace SceneManagement
 {
     public class SceneTransition : MonoBehaviour
@@ -11,12 +12,17 @@ namespace SceneManagement
         public string SelectedScene => selectedScene;
         [SerializeField]
         public SceneList sceneList;
+        private MouseClickSound sound;
 #if UNITY_EDITOR
         public void SetScenes()
         {
             sceneList = AssetDatabase.LoadAssetAtPath<SceneList>("Assets/Scripts/SceneManagement/SceneList.asset");
         }
-        #endif
+#endif
+        private void Start()
+        {
+            sound = GetComponent<MouseClickSound>();
+        }
         private void OnMouseOver()
         {
             //highlight
@@ -24,6 +30,7 @@ namespace SceneManagement
 
         private void OnMouseDown()
         {
+            sound.playSound();
             MoveToNextScene();
         }
 
