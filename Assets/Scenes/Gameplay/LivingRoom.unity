@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2f5a810069d6534fa1c1ede1418f2dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedScene: Hallway
+  selectedScene: MainHall
   sceneList: {fileID: 11400000, guid: 4ccd7af28afa30943a20f7a652eeb888, type: 2}
 --- !u!65 &796316990
 BoxCollider:

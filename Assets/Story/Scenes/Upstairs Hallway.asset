@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Upstairs Hallway
   m_EditorClassIdentifier: 
   sentences:
-  - text: " \u201CWelcome to your living commons, Your bathroom is to the left and
+  - text: " \u201CWelcome to your living commons. Your bathroom is to the left, and
       your bedroom is to the right.\u201D"
     speaker: {fileID: 11400000, guid: 755db819ff1a2ea4aa12594b5b3997b8, type: 2}
   - text: "\u201CThank you for all of your help. I really appreciate it, I'd be totally

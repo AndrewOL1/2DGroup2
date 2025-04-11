@@ -1,39 +1,42 @@
-using System.Collections;
-using System.Collections.Generic;
 using Player;
 using UnityEngine;
 
-public class Lock : MonoBehaviour
+namespace Inventory
 {
-    [SerializeField] int keyID;
-    [SerializeField] StoryScene dialogue;
-    [SerializeField] StoryScene errorDialogue;
-    [SerializeField] GameObject Key;
-    [SerializeField] bool spawnItem;
-    private MouseClickSound sound;
-    public void TryToOpenLock(int ID )
+    public class Lock : MonoBehaviour
     {
-        if(keyID==ID)
+        [SerializeField] int keyID;
+        [SerializeField] StoryScene dialogue;
+        [SerializeField] StoryScene errorDialogue;
+        [SerializeField] GameObject key;
+        [SerializeField] bool spawnItem;
+        [SerializeField] Vector3 spawnPosition;
+        private MouseClickSound _sound;
+        public void TryToOpenLock(int id )
         {
-            //open object visual component
-            Debug.Log("Lock opened");
-            GameController.Instance.StartDialogue(dialogue);
-            if (spawnItem)
-                Instantiate(Key, new Vector3(-5, -2.2939999f, 0), Quaternion.identity);
+            if(keyID==id)
+            {
+                //open object visual component
+                Debug.Log("Lock opened");
+                GameController.Instance.StartDialogue(dialogue);
+                if (spawnItem)
+                    Instantiate(key, spawnPosition, Quaternion.identity);
 
+            }
+            else
+            {
+                GameController.Instance.StartDialogue(errorDialogue);
+            }
         }
-        else
+        private void OnMouseDown()
         {
-            GameController.Instance.StartDialogue(errorDialogue);
+            if(GameController.Instance.GetIsDialogueOpen())return;
+            _sound.playSound();
+            TryToOpenLock(PlayerController.Instance.playerData.id);
         }
-    }
-    private void OnMouseDown()
-    {
-        sound.playSound();
-        TryToOpenLock(PlayerController.Instance.playerData.id);
-    }
-    private void Start()
-    {
-        sound = GetComponent<MouseClickSound>();
+        private void Start()
+        {
+            _sound = GetComponent<MouseClickSound>();
+        }
     }
 }

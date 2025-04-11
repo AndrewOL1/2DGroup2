@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: OpenChest
   m_EditorClassIdentifier: 
   sentences:
-  - text: This cog is dusty and has cobwebs covering it almost entirely, Its dust
-      covers your finger with a dark layer of soot. You wonder what its use could
-      be.
+  - text: "\u201CInside the chest is a lot of gold and jewelry shining with a variety
+      of different colors, It seems as though this is the entire fortune of the man
+      who passed is laying right in front of you. He must have led you here intending
+      for you to find this treasure.\u201D"
     speaker: {fileID: 11400000, guid: 4028f3f41069cdd46a994845bdd58d73, type: 2}
   background: {fileID: 21300000, guid: 82616faedce36ab4dbad3adbacb2cf63, type: 3}
   nextScene: {fileID: 0}

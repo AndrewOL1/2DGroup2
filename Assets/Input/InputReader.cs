@@ -49,13 +49,15 @@ namespace Input
 
         public void OnInteract(InputAction.CallbackContext context)
         {
-            if (context.phase != InputActionPhase.Performed) return;
-            InteractEvent?.Invoke();
-        }
-        public void OnInteractCancelled(InputAction.CallbackContext context)
-        {
-            if (context.phase != InputActionPhase.Canceled) return;
-            InteractEvent?.Invoke();
+            switch (context.phase)
+            {
+                case InputActionPhase.Performed:
+                    InteractEvent?.Invoke();
+                    break;
+                case InputActionPhase.Canceled:
+                    InteractEventCancelled?.Invoke();
+                    break;
+            }
         }
 
         public void OnPause(InputAction.CallbackContext context)

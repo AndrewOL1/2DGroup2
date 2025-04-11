@@ -30,13 +30,15 @@ namespace SceneManagement
 
         private void OnMouseDown()
         {
+            if(GameController.Instance.GetIsDialogueOpen())return;
+            if(SceneManager.Instance.overUI)return;
             sound.playSound();
             MoveToNextScene();
         }
 
         private void MoveToNextScene()
         {
-            SceneManagement.SceneManager.Instance.LoadNextScene(selectedScene);
+            SceneManager.Instance.LoadNextScene(selectedScene);
         }
     }
 }

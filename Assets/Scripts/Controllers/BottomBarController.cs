@@ -46,6 +46,13 @@ public class BottomBarController : MonoBehaviour
         return sentenceIndex + 1 == currentScene.sentences.Count;
     }
 
+    public void FinishSentence()
+    {
+        StopAllCoroutines();
+        barText.text=currentScene.sentences[sentenceIndex].text;
+        state = State.COMPLETED;
+    }
+
     private IEnumerator TypeText(string text)
     {
         barText.text = "";

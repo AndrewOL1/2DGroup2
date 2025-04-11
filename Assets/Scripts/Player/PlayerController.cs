@@ -78,6 +78,11 @@ namespace Player
        void At(IState from, IState to, IPredicate condition) => _stateMachine.AddTransition(from, to, condition);
        void Any(IState to, IPredicate condition) => _stateMachine.AddAnyTransition(to, condition);
 
+       private void Start()
+       {
+           SetActiveItem(0);
+       }
+
        private void Update()
        {
            _stateMachine.Update();

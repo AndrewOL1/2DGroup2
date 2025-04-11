@@ -376,7 +376,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.09411765, g: 0.16078432, b: 0.2, a: 0.45490196}
+  m_Color: {r: 0.15801886, g: 0.45649892, b: 0.6320754, a: 0.45490196}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -395,8 +395,8 @@ Transform:
   m_GameObject: {fileID: 1150086483}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.9634, y: 0.0331, z: 0}
-  m_LocalScale: {x: 3.7642963, y: 9.804569, z: 1}
+  m_LocalPosition: {x: -7.5135, y: 0.01, z: 0}
+  m_LocalScale: {x: 2.7174454, y: 9.804569, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -413,7 +413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2f5a810069d6534fa1c1ede1418f2dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedScene: MainHall
+  selectedScene: Hallway
   sceneList: {fileID: 11400000, guid: 4ccd7af28afa30943a20f7a652eeb888, type: 2}
 --- !u!114 &1150086490
 MonoBehaviour:
@@ -499,7 +499,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6885901fc3d1f7d4d99de7fe85c662a1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 90a7aa2aaa1a71649a266fcbb0ab0e9c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -519,8 +519,8 @@ Transform:
   m_GameObject: {fileID: 1812258663}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.071, y: -0.046, z: 0}
-  m_LocalScale: {x: 1.7899542, y: 1.5019368, z: 1}
+  m_LocalPosition: {x: 0.0265, y: -0.0073, z: 0}
+  m_LocalScale: {x: 2.4325488, y: 1.5673406, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

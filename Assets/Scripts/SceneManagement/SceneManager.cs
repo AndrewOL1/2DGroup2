@@ -11,6 +11,7 @@ namespace SceneManagement
         public static SceneManager Instance { get; set; }
         private static SceneList _sceneListObject;
         private static List<string> sceneList = new List<string>();
+        public bool overUI = false;
         private void Awake()
         {
             if (Instance == null)
