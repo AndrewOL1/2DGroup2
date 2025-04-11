@@ -1,3 +1,4 @@
+using Controllers;
 using UnityEngine;
 
 namespace DialogueTriggers
@@ -7,7 +8,9 @@ namespace DialogueTriggers
         [SerializeField] private bool OnSceneEnter, OnInteract;
         private bool _stop = false;
         [SerializeField] private StoryScene startingDialogue;
-
+        //either be an on enter scene or am on interaction dialogue trigger
+        //can't be both or neither
+        
         private void Start()
         {
             if (OnSceneEnter == OnInteract)

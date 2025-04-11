@@ -31,7 +31,7 @@ namespace Editor
 
             // Display the dropdown
             _sceneOptionsArray=_sceneOptions.ToArray();
-            int newIndex = EditorGUILayout.Popup("Select Option", _selectedIndex, _sceneOptionsArray);
+            int newIndex = EditorGUILayout.Popup("Select Scene", _selectedIndex, _sceneOptionsArray);
             // Save the selected option
 
             if (newIndex != _selectedIndex)

@@ -1,4 +1,5 @@
 using System;
+using Controllers;
 using DialogueTriggers;
 using Player;
 using UnityEngine;
@@ -24,7 +25,7 @@ namespace Inventory
         private void OnMouseDown()
         {
             if(GameController.Instance.GetIsDialogueOpen())return;
-            sound.playSound();
+            sound.PlaySound();
             //check player state and decide to interact or pick up
             InventoryManager.Instance.AddItemToInventory(this,ID,Name);//might need to set it to send its prefab so i can be spawned again
             _dialogueTrigger.PlayInteractDialogue();

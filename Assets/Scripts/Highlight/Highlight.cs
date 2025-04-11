@@ -4,8 +4,12 @@ namespace Highlight
 {
     public class Highlight : MonoBehaviour
     {
+        
         private Color _startColour;
-        [SerializeField] private Color highlightColor;
+        [Header("Color")]
+        [SerializeField]
+        [Tooltip("It will apply this color to the SpriteRenderer on mouse over")] 
+        private Color highlightColor;
         private void Start()
         {
             _startColour = GetComponent<Renderer>().material.color; 

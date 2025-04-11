@@ -5,11 +5,11 @@ using Inventory;
 public class MouseClickSound : MonoBehaviour
 {
     public AudioClip clickSound;
-    private AudioSource audioSource;
+    private AudioSource _audioSource;
 
     void Start()
     {
-        audioSource = InventoryManager.Instance.gameObject.GetComponent<AudioSource>();
+        _audioSource = InventoryManager.Instance.gameObject.GetComponent<AudioSource>();
     }
 
     void Update()
@@ -17,8 +17,8 @@ public class MouseClickSound : MonoBehaviour
         
         //audioSource.PlayOneShot(clickSound);
     }
-    public void playSound()
+    public void PlaySound()
     {
-        audioSource.PlayOneShot(clickSound);
+        _audioSource.PlayOneShot(clickSound);
     }
 }

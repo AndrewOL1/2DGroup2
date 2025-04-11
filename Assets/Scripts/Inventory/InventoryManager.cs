@@ -11,8 +11,9 @@ namespace Inventory
     public class InventoryManager : MonoBehaviour
     {
         private InventoryItem[] _items;  
-        [SerializeField] private GameObject itemWidget;
-        [SerializeField] private InventoryItem item;
+        [SerializeField] 
+        [Tooltip("The UI Item Widget")]private GameObject itemWidget;
+        private InventoryItem _item;
         [SerializeField] private GameObject inventoryBackground;
         [SerializeField] private int inventorySize;
         private Dictionary<int, string> _itemDictionary = new Dictionary<int, string>();

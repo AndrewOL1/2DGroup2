@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using System.Collections.Generic;
+using Controllers;
 using UnityEditor;
 
 
@@ -8,11 +9,13 @@ namespace SceneManagement
 {
     public class SceneTransition : MonoBehaviour
     { 
+        [HideInInspector]
         [SerializeField]private string selectedScene;
         public string SelectedScene => selectedScene;
+        [HideInInspector]
         [SerializeField]
         public SceneList sceneList;
-        private MouseClickSound sound;
+        private MouseClickSound _sound;
 #if UNITY_EDITOR
         public void SetScenes()
         {
@@ -21,7 +24,7 @@ namespace SceneManagement
 #endif
         private void Start()
         {
-            sound = GetComponent<MouseClickSound>();
+            _sound = GetComponent<MouseClickSound>();
         }
         private void OnMouseOver()
         {
@@ -32,7 +35,7 @@ namespace SceneManagement
         {
             if(GameController.Instance.GetIsDialogueOpen())return;
             if(SceneManager.Instance.overUI)return;
-            sound.playSound();
+            _sound.PlaySound();
             MoveToNextScene();
         }
 

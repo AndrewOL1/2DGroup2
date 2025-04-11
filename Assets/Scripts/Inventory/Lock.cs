@@ -1,3 +1,4 @@
+using Controllers;
 using Player;
 using UnityEngine;
 
@@ -31,7 +32,7 @@ namespace Inventory
         private void OnMouseDown()
         {
             if(GameController.Instance.GetIsDialogueOpen())return;
-            _sound.playSound();
+            _sound.PlaySound();
             TryToOpenLock(PlayerController.Instance.playerData.id);
         }
         private void Start()
