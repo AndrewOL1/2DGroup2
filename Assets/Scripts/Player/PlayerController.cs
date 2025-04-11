@@ -1,8 +1,12 @@
 using System;
 using System.Collections;
 using Player.StateMachineScripts;
+using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using IState = Player.StateMachineScripts.IState;
+using StateMachine = Player.StateMachineScripts.StateMachine;
 
 namespace Player
 {
@@ -20,7 +24,7 @@ namespace Player
      */
     public class PlayerController : MonoBehaviour
     {
-        private static PlayerController _instance;
+        public static PlayerController Instance;
        # region Variables
        StateCollection _states;
        public PlayerInputProcessor InputProcessor;
@@ -32,18 +36,18 @@ namespace Player
        [SerializeField] private Animator animator;
        //[SerializeField] private PlayerCollision playerCollision;
        private SpriteRenderer _spriteRenderer;
-
+       [SerializeField] private int itemId;
        public bool delayB;
        #endregion
 
        private void Awake()
        {
-           if (_instance == null)
+           if (Instance == null)
            {
-               _instance = this;
+               Instance = this;
                DontDestroyOnLoad(this.gameObject);
            }
-           else if (_instance != this) Destroy(this.gameObject);
+           else if (Instance != this) Destroy(this.gameObject);
 
            _stateMachine = new StateMachine();
            _states = new StateCollection(this,animator,playerData);
@@ -52,7 +56,20 @@ namespace Player
            //playerCollision.SetPlayerLocomotion(PlayerLocomotion);
            //define transitions
            //At(_states.LocomotionState,_states.JumpState, new FuncPredicate(()=> InputProcessor.IsJumping&&playerCollision.coyoteTimer>=0));
-           At(_states.IdleState,_states.DialogueState, new FuncPredicate(()=> InputProcessor.IsJumping));
+           At(_states.IdleState,_states.DialogueState, new FuncPredicate(()=> InputProcessor.IsJumping));//don't know if needed
+           At(_states.IdleState,_states.LetterState, new FuncPredicate(()=> itemId==1));
+           At(_states.IdleState,_states.KeyState, new FuncPredicate(()=> itemId==2));
+           At(_states.IdleState,_states.CogState, new FuncPredicate(()=> itemId==3));
+           At(_states.KeyState,_states.LetterState, new FuncPredicate(()=> itemId==1));
+           At(_states.CogState,_states.LetterState, new FuncPredicate(()=> itemId==1));
+           At(_states.LetterState,_states.KeyState, new FuncPredicate(()=> itemId==2));
+           At(_states.CogState,_states.KeyState, new FuncPredicate(()=> itemId==2));
+           At(_states.LetterState,_states.CogState, new FuncPredicate(()=> itemId==3));
+           At(_states.KeyState,_states.CogState, new FuncPredicate(()=> itemId==3));
+           At(_states.LetterState,_states.IdleState, new FuncPredicate(()=> itemId==0));
+           At(_states.KeyState,_states.IdleState, new FuncPredicate(()=> itemId==0));
+           At(_states.CogState,_states.IdleState, new FuncPredicate(()=> itemId==0));
+           
            
            //inital state
            _stateMachine.SetState(_states.IdleState);
@@ -68,6 +85,20 @@ namespace Player
        private void FixedUpdate()
        {
            _stateMachine.FixedUpdate();
+       }
+
+       public void SetActiveItem(int id)
+       {
+           if (id == itemId)
+           {
+               itemId = 0;
+               playerData.id = 0;
+           }
+           else
+           {
+               itemId = id;
+               playerData.id = id;
+           }
        }
     }
 }

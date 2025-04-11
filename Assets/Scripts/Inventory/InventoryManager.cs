@@ -1,3 +1,7 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using Player;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -11,6 +15,7 @@ namespace Inventory
         [SerializeField] private InventoryItem item;
         [SerializeField] private GameObject inventoryBackground;
         [SerializeField] private int inventorySize;
+        private Dictionary<int, string> _itemDictionary = new Dictionary<int, string>();
         private int _inventoryCount;
         public static InventoryManager Instance { get; private set; }
 
@@ -25,11 +30,13 @@ namespace Inventory
                 Destroy(gameObject);
         }
 
-        public void AddItemToInventory(InventoryItem item)
+        public void AddItemToInventory(InventoryItem item,int id,string name)
         {
             if (_inventoryCount >= inventorySize) return;
+            _itemDictionary.Add(id, name);
             GameObject temp = Instantiate(itemWidget, inventoryBackground.transform, true);
             UpdateWidget(item, temp);
+            temp.GetComponent<InventoryWidget>().id = id;
             _inventoryCount++;
         }
         //need a check when loading scene to unload pickup if we are holding it
@@ -41,6 +48,16 @@ namespace Inventory
         public void RemoveItemFromInventory(InventoryItem item)
         {
             //find item index delete Inventory item script then delete the widget with corresponding index
+        }
+
+        public bool CheckIfInInventory(int id)
+        {
+            return _itemDictionary.ContainsKey(id);
+        }
+
+        public void UseItem(int id)
+        {
+            PlayerController.Instance.SetActiveItem(id);
         }
     }
 }
