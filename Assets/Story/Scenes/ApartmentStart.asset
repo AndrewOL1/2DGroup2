@@ -43,7 +43,7 @@ MonoBehaviour:
   - text: "\u201CI guess I must go to this address\u2026\u201D"
     speaker: {fileID: 11400000, guid: 226d2a0055887a6498a5078f609a6163, type: 2}
   background: {fileID: 21300000, guid: ab672e75aa638c5408bfd080cbe315ab, type: 3}
-  nextScene: {fileID: 11400000, guid: 5a227718f9adde8459ae4099f6eafac6, type: 2}
+  nextScene: {fileID: 0}
   sceneName: Test1
-  loadNewScene: 1
+  loadNewScene: 0
   EndConversation: 0

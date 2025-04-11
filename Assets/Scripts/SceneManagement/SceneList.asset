@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: SceneList
   m_EditorClassIdentifier: 
   scenes:
-  - SampleScene
-  - Test1
-  - Test2
-  - TestScene
+  - Hallway
+  - Apartment
+  - Bathroom
+  - Bedroom
+  - FrontGate
+  - LivingRoom
+  - MainHall
