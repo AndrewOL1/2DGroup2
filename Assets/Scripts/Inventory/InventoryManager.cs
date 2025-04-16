@@ -46,9 +46,20 @@ namespace Inventory
             temp.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = item.Name;//maybe display name on hover over
             //update icon
         }
-        public void RemoveItemFromInventory(InventoryItem item)
+        public void RemoveItemFromInventory(int id )
         {
-            //find item index delete Inventory item script then delete the widget with corresponding index
+            int count = -1;
+            foreach (var item in _itemDictionary)
+            {
+                count++;
+                if (item.Key != id)
+                {
+                    return;
+                }
+                _itemDictionary.Remove(item.Key);
+                Destroy(inventoryBackground.transform.GetChild(count).gameObject);
+                return;
+            }
         }
 
         public bool CheckIfInInventory(int id)

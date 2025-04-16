@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using System.Collections.Generic;
 using Controllers;
@@ -36,11 +37,13 @@ namespace SceneManagement
             if(GameController.Instance.GetIsDialogueOpen())return;
             if(SceneManager.Instance.overUI)return;
             _sound.PlaySound();
-            MoveToNextScene();
+            SceneManager.Instance.FadeOut(.5f);
+            StartCoroutine(MoveToNextScene());
         }
 
-        private void MoveToNextScene()
+        private IEnumerator MoveToNextScene()
         {
+            yield return new WaitForSeconds(.5f);
             SceneManager.Instance.LoadNextScene(selectedScene);
         }
     }

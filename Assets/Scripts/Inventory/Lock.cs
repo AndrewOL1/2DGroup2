@@ -13,7 +13,8 @@ namespace Inventory
         [SerializeField] bool spawnItem;
         [SerializeField] Vector3 spawnPosition;
         private MouseClickSound _sound;
-        public void TryToOpenLock(int id )
+
+        private void TryToOpenLock(int id )
         {
             if(keyID==id)
             {
@@ -34,6 +35,7 @@ namespace Inventory
             if(GameController.Instance.GetIsDialogueOpen())return;
             _sound.PlaySound();
             TryToOpenLock(PlayerController.Instance.playerData.id);
+            InventoryManager.Instance.RemoveItemFromInventory(PlayerController.Instance.playerData.id);
         }
         private void Start()
         {
