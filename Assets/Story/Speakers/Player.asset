@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speakerName: Player
   textColor: {r: 0.8490566, g: 0.20425417, b: 0.52160925, a: 1}
+  noSprite: 1
+  characterSprite: {fileID: 0}

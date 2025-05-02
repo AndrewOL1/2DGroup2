@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speakerName: Sarah
   textColor: {r: 0.6739578, g: 0, b: 1, a: 1}
+  noSprite: 1
   characterSprite: {fileID: 21300000, guid: 28494a837fb3dd547afc3bb97cc1be3d, type: 3}

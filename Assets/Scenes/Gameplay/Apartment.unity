@@ -1852,6 +1852,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4919573651974488590, guid: 3d6ba15f0ebd56047ba985a7d44f0dc1, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 220
+      objectReference: {fileID: 0}
+    - target: {fileID: 4919573651974488590, guid: 3d6ba15f0ebd56047ba985a7d44f0dc1, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 450
+      objectReference: {fileID: 0}
+    - target: {fileID: 4919573651974488590, guid: 3d6ba15f0ebd56047ba985a7d44f0dc1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6430685009252903061, guid: 3d6ba15f0ebd56047ba985a7d44f0dc1, type: 3}
       propertyPath: m_Name
       value: DialogueSystem
