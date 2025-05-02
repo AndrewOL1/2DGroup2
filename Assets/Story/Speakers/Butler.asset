@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speakerName: Butler
   textColor: {r: 0.05090782, g: 0.27942827, b: 0.8301887, a: 1}
-  characterSprite: {fileID: 21300000, guid: 1e91092d5c3389e41abd7d58ed3ebbf3, type: 3}
+  characterSprite: {fileID: 21300000, guid: c8f7a36df29ee6047abb66b68d95e13e, type: 3}
