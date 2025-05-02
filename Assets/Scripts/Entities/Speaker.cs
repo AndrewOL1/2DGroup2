@@ -6,5 +6,6 @@ public class Speaker : ScriptableObject
 {
     public string speakerName;
     public Color textColor;
+    public bool noSprite;
     public Sprite characterSprite;
 }
