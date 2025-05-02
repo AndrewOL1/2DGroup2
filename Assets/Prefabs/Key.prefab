@@ -103,6 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 2
   Name: Key
+  _cursorTexture: {fileID: 2800000, guid: 21cbdb598832d1e479d918b12ee89fe5, type: 3}
 --- !u!114 &3367422900366469819
 MonoBehaviour:
   m_ObjectHideFlags: 0

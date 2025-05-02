@@ -468,6 +468,7 @@ MonoBehaviour:
   key: {fileID: 0}
   spawnItem: 0
   spawnPosition: {x: 0, y: 0, z: 0}
+  _cursorTexture: {fileID: 0}
 --- !u!58 &1907281308
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -645,6 +646,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedScene: Hallway
   sceneList: {fileID: 11400000, guid: 4ccd7af28afa30943a20f7a652eeb888, type: 2}
+  _cursorTexture: {fileID: 2800000, guid: 248bcfb6d51750f4e91665224ebab00b, type: 3}
 --- !u!65 &2084493725
 BoxCollider:
   m_ObjectHideFlags: 0

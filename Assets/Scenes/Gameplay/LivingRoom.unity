@@ -170,6 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedScene: MainHall
   sceneList: {fileID: 11400000, guid: 4ccd7af28afa30943a20f7a652eeb888, type: 2}
+  _cursorTexture: {fileID: 2800000, guid: 248bcfb6d51750f4e91665224ebab00b, type: 3}
 --- !u!65 &796316990
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -462,6 +463,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 3
   Name: Cog
+  _cursorTexture: {fileID: 2800000, guid: 21cbdb598832d1e479d918b12ee89fe5, type: 3}
 --- !u!212 &1615686009
 SpriteRenderer:
   m_ObjectHideFlags: 0

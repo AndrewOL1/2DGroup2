@@ -170,6 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedScene: Bedroom
   sceneList: {fileID: 11400000, guid: 4ccd7af28afa30943a20f7a652eeb888, type: 2}
+  _cursorTexture: {fileID: 2800000, guid: 248bcfb6d51750f4e91665224ebab00b, type: 3}
 --- !u!65 &134229240
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -533,6 +534,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedScene: Bathroom
   sceneList: {fileID: 11400000, guid: 4ccd7af28afa30943a20f7a652eeb888, type: 2}
+  _cursorTexture: {fileID: 2800000, guid: 4aac5f1dc3b6d1546bb77aad6b833ad7, type: 3}
 --- !u!114 &1150086490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -691,6 +693,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedScene: MainHall
   sceneList: {fileID: 11400000, guid: 4ccd7af28afa30943a20f7a652eeb888, type: 2}
+  _cursorTexture: {fileID: 2800000, guid: 3e08dee40fb56c34092211b92f6f675a, type: 3}
 --- !u!65 &1822520326
 BoxCollider:
   m_ObjectHideFlags: 0
