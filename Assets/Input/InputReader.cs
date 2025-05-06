@@ -39,6 +39,7 @@ namespace Input
         public event Action<Vector2> LookEvent;
         public event Action InteractEvent;
         public event Action InteractEventCancelled;
+        public event Action InspectEvent;
         # endregion
         public void OnResume(InputAction.CallbackContext context)
         {
@@ -70,6 +71,12 @@ namespace Input
         public void OnMousePos(InputAction.CallbackContext context)
         {
             LookEvent?.Invoke(context.ReadValue<Vector2>());
+        }
+
+        public void OnInspect(InputAction.CallbackContext context)
+        {
+            if (context.phase != InputActionPhase.Performed) return;
+            InspectEvent?.Invoke();
         }
     }
 }

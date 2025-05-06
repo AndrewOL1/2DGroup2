@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 using System.Collections.Generic;
 using Controllers;
+using Inspect;
 using UnityEditor;
 
 
@@ -44,6 +45,7 @@ namespace SceneManagement
         private void OnMouseDown()
         {
             if(GameController.Instance.GetIsDialogueOpen())return;
+            if(InspectManager.Instance.GetIsInspectActive())return;
             if(SceneManager.Instance.overUI)return;
             _sound.PlaySound();
             SceneManager.Instance.FadeOut(.5f);

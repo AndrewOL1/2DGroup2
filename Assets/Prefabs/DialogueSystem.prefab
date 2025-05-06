@@ -422,6 +422,7 @@ MonoBehaviour:
   currentScene: {fileID: 11400000, guid: 8157eee26ed449e4180b2df48a5f5257, type: 2}
   bottomBar: {fileID: 4080959303017467589}
   input: {fileID: 11400000, guid: 373a768c62aad4c4aa4e4574e6fac462, type: 2}
+  firstLetter: {fileID: 2962219187851122765, guid: 4fbbd53507b5aab42ae579a3df80c8c4, type: 3}
 --- !u!1 &9173947009014957062
 GameObject:
   m_ObjectHideFlags: 0

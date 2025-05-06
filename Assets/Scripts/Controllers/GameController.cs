@@ -1,5 +1,7 @@
 using System.Collections;
 using Input;
+using Inspect;
+using Inventory;
 using UnityEngine;
 
 namespace Controllers
@@ -13,6 +15,8 @@ namespace Controllers
         private InputReader input;
         private 
             bool _isInteracting = false,_delay=false,_isDialogueOpen=false;
+
+        [SerializeField] private GameObject firstLetter;
         public static GameController Instance { get; private set; }
 
         private void Awake()
@@ -84,6 +88,8 @@ namespace Controllers
                     {
                         _isDialogueOpen = false;
                         ToggleVisibility();
+                        if(bottomBar.currentScene.EndConversation)
+                            InspectManager.Instance.InspectAndStoreInInventory(firstLetter,firstLetter.GetComponent<InventoryItem>().Size);
                     }
                     else
                         bottomBar.PlayNextSentence();

@@ -56,19 +56,7 @@ namespace Player
            //playerCollision.SetPlayerLocomotion(PlayerLocomotion);
            //define transitions
            //At(_states.LocomotionState,_states.JumpState, new FuncPredicate(()=> InputProcessor.IsJumping&&playerCollision.coyoteTimer>=0));
-           At(_states.IdleState,_states.DialogueState, new FuncPredicate(()=> InputProcessor.IsJumping));//don't know if needed
-           At(_states.IdleState,_states.LetterState, new FuncPredicate(()=> itemId==1));
-           At(_states.IdleState,_states.KeyState, new FuncPredicate(()=> itemId==2));
-           At(_states.IdleState,_states.CogState, new FuncPredicate(()=> itemId==3));
-           At(_states.KeyState,_states.LetterState, new FuncPredicate(()=> itemId==1));
-           At(_states.CogState,_states.LetterState, new FuncPredicate(()=> itemId==1));
-           At(_states.LetterState,_states.KeyState, new FuncPredicate(()=> itemId==2));
-           At(_states.CogState,_states.KeyState, new FuncPredicate(()=> itemId==2));
-           At(_states.LetterState,_states.CogState, new FuncPredicate(()=> itemId==3));
-           At(_states.KeyState,_states.CogState, new FuncPredicate(()=> itemId==3));
-           At(_states.LetterState,_states.IdleState, new FuncPredicate(()=> itemId==0));
-           At(_states.KeyState,_states.IdleState, new FuncPredicate(()=> itemId==0));
-           At(_states.CogState,_states.IdleState, new FuncPredicate(()=> itemId==0));
+           At(_states.IdleState,_states.TestState, new FuncPredicate(()=> 0>1));
            
            
            //inital state

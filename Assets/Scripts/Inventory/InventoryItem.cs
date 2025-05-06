@@ -17,6 +17,7 @@ namespace Inventory
         private Texture2D _cursorTexture;
         private Texture2D _cursor;
         private bool _grabbed = false;
+        public Vector2 Size;
         private void Start()
         {
             if(InventoryManager.Instance.CheckIfInInventory(ID))
@@ -44,7 +45,7 @@ namespace Inventory
             sound.PlaySound();
             _grabbed = true;
             //check player state and decide to interact or pick up
-            InventoryManager.Instance.AddItemToInventory(this,ID,Name);//might need to set it to send its prefab so i can be spawned again
+            InventoryManager.Instance.AddItemToInventory(this);//might need to set it to send its prefab so i can be spawned again
             _dialogueTrigger.PlayInteractDialogue();
             Cursor.SetCursor(_cursor, new Vector2(8, 0), CursorMode.Auto);
             Destroy(gameObject);//maybe turn off visual and the collider

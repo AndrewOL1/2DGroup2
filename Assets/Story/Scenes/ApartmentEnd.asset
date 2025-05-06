@@ -10,16 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 51fb4c6070f247e48b4377b5728b8182, type: 3}
-  m_Name: ApartmentStart
+  m_Name: ApartmentEnd
   m_EditorClassIdentifier: 
   sentences:
-  - text: " \u201CHey, there is a letter for you on the table, some guy in a suit
-      dropped it off for you\u201D "
+  - text: "\u201CWhat? Who gave you this again?\u201D"
+    speaker: {fileID: 11400000, guid: 226d2a0055887a6498a5078f609a6163, type: 2}
+  - text: " \u201CI didn\u2019t ask, I am sorry, what does it say?\u201D"
     speaker: {fileID: 11400000, guid: eddfe009b49d3484d8dfb5498d6a2f17, type: 2}
-  - text: " \u201COh sure, thanks\u201D "
+  - text: " \u201CNothing\u2026 I have to go\u2026\u201D"
+    speaker: {fileID: 11400000, guid: 226d2a0055887a6498a5078f609a6163, type: 2}
+  - text: "\u201CI guess I must go to this address\u2026\u201D"
     speaker: {fileID: 11400000, guid: 226d2a0055887a6498a5078f609a6163, type: 2}
   background: {fileID: 21300000, guid: ab672e75aa638c5408bfd080cbe315ab, type: 3}
   nextScene: {fileID: 0}
   sceneName: Test1
   loadNewScene: 0
-  EndConversation: 1
+  EndConversation: 0
