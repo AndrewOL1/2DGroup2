@@ -366,7 +366,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &1027825497
 AudioListener:
   m_ObjectHideFlags: 0
@@ -564,6 +564,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedScene: MainHall
   sceneList: {fileID: 11400000, guid: 4ccd7af28afa30943a20f7a652eeb888, type: 2}
+  _cursorTexture: {fileID: 2800000, guid: 21cbdb598832d1e479d918b12ee89fe5, type: 3}
 --- !u!114 &1150086490
 MonoBehaviour:
   m_ObjectHideFlags: 0

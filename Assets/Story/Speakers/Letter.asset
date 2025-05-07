@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speakerName: Letter
   textColor: {r: 0.82829195, g: 0.8679245, b: 0.36436453, a: 1}
+  characterSprite: {fileID: 21300000, guid: 9675be00576e98c4bb0920c8fdb9e934, type: 3}

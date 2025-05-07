@@ -33,6 +33,10 @@ namespace Controllers
             StartCoroutine(TypeText(currentScene.sentences[++sentenceIndex].text));
             personNameText.text = currentScene.sentences[sentenceIndex].speaker.speakerName;
             personNameText.color = currentScene.sentences[sentenceIndex].speaker.textColor;
+            if (currentScene.sentences[sentenceIndex].speaker.noSprite)
+                charaterSprite.color = new Color(0, 0, 0, 0);
+            else
+                charaterSprite.color = new Color(1, 1, 1, 1);
             charaterSprite.sprite = currentScene.sentences[sentenceIndex].speaker.characterSprite;
         }
 

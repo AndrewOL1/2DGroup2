@@ -2,11 +2,13 @@ using UnityEngine;
 
 namespace Player.StateMachineScripts.States
 {
-    public class CogState : BaseState
+
+    public class TestState : BaseState
     {
-        public CogState(PlayerController player, Animator animator) : base(player, animator)
+        public TestState(PlayerController player, Animator animator) : base(player, animator)
         {
         }
+
         public override void OnEnter()
         {
             
@@ -15,5 +17,6 @@ namespace Player.StateMachineScripts.States
         public override void FixedUpdate()
         {
         }
+        
     }
 }

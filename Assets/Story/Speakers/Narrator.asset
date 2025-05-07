@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speakerName: Narrator
   textColor: {r: 0.11672304, g: 0.5754717, b: 0.12788631, a: 1}
+  noSprite: 1
+  characterSprite: {fileID: 0}
