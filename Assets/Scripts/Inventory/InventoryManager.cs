@@ -84,6 +84,8 @@ namespace Inventory
                     return;
                 }
             }
+
+            _inventoryCount--;
         }
 
         public bool CheckIfInInventory(int id)

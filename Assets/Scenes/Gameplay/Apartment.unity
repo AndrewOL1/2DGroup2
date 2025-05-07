@@ -768,6 +768,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: InventoryManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3773446457278006114, guid: 2c23014fa25181142b760a0f788143dc, type: 3}
+      propertyPath: inventoryWidgetItems.Array.data[0].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: dbb922522df722c40b9dd3728a93e30b, type: 3}
     - target: {fileID: 4850373605119844677, guid: 2c23014fa25181142b760a0f788143dc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
