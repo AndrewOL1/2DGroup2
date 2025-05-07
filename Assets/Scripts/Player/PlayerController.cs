@@ -69,6 +69,9 @@ namespace Player
        private void Start()
        {
            SetActiveItem(0);
+           playerData.fixViolin = false;
+           playerData.openChest = false;
+           playerData.fixClock = false;
        }
 
        private void Update()

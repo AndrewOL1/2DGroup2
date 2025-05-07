@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 2074460962885817111}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.77, y: -0.7, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.07, y: 0.07, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: dbb922522df722c40b9dd3728a93e30b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 80f4f13aa42b35440bf25e796d4a0b18, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -103,7 +103,7 @@ MonoBehaviour:
   ID: 5
   Name: Obituary
   _cursorTexture: {fileID: 2800000, guid: 21cbdb598832d1e479d918b12ee89fe5, type: 3}
-  Size: {x: 500, y: 500}
+  Size: {x: 480, y: 480}
 --- !u!58 &4220035394441887499
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -70,22 +70,47 @@ namespace Inventory
         }
         public void RemoveItemFromInventory(int id )
         {
-            int count = -1;
+            int count = 0;
             foreach (var item in _itemDictionary)
             {
                 count++;
                 if (item.Key == id)
                 {
                     _itemDictionary.Remove(item.Key);
-                    if (count < 3)
-                        Destroy(inventoryBackgroundRow1.transform.GetChild(count).gameObject);
+                    if (count < 5)
+                    {
+                        Destroy(inventoryBackgroundRow1.transform.GetChild(count - 1).gameObject);
+                        UpdatePositions(count);
+                    }
                     else if (count < 8)
-                        Destroy(inventoryBackgroundRow2.transform.GetChild(count-4).gameObject);
+                        Destroy(inventoryBackgroundRow2.transform.GetChild(count-5).gameObject);
+                    _inventoryCount--;
+                    RemakeList();
                     return;
                 }
             }
+            
+            
+        }
 
-            _inventoryCount--;
+        private void RemakeList()
+        {
+            Dictionary<int, string> newItemDictionary = new Dictionary<int, string>();
+            foreach (var item in _itemDictionary)
+            {
+                if (item.Key!=null)
+                {
+                    newItemDictionary.Add(item.Key, item.Value);
+                }
+            }
+            _itemDictionary=newItemDictionary;
+        }
+
+        private void UpdatePositions(int count)
+        {
+            if (_itemDictionary.Count<3)return;
+            if(count==5)return;
+            inventoryBackgroundRow2.transform.GetChild(0).gameObject.transform.parent = inventoryBackgroundRow1.transform;
         }
 
         public bool CheckIfInInventory(int id)

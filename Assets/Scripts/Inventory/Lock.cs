@@ -13,6 +13,7 @@ namespace Inventory
         [SerializeField] GameObject key;
         [SerializeField] bool spawnItem;
         [SerializeField] Vector3 spawnPosition;
+        [SerializeField] Sprite fixedSprite;
         private MouseClickSound _sound;
         [SerializeField]
         private Texture2D _cursorTexture;
@@ -27,7 +28,14 @@ namespace Inventory
                 GameController.Instance.StartDialogue(dialogue);
                 if (spawnItem)
                     Instantiate(key, spawnPosition, Quaternion.identity);
-
+                InventoryManager.Instance.RemoveItemFromInventory(PlayerController.Instance.playerData.id);
+                GetComponent<SpriteRenderer>().sprite = fixedSprite;
+                if(gameObject.GetComponent<ViolinCheck>()!= null)
+                    gameObject.GetComponent<ViolinCheck>().Violin();
+                if(gameObject.GetComponent<ChestCheck>()!= null)
+                    gameObject.GetComponent<ChestCheck>().Chest();
+                if(gameObject.GetComponent<ClockCheck>()!= null)
+                    gameObject.GetComponent<ClockCheck>().Clock();
             }
             else
             {
@@ -39,7 +47,6 @@ namespace Inventory
             if(GameController.Instance.GetIsDialogueOpen())return;
             _sound.PlaySound();
             TryToOpenLock(PlayerController.Instance.playerData.id);
-            InventoryManager.Instance.RemoveItemFromInventory(PlayerController.Instance.playerData.id);
         }
         private void OnMouseOver()
         {
@@ -53,6 +60,11 @@ namespace Inventory
         {
             _sound = GetComponent<MouseClickSound>();
             _cursor= AssetDatabase.LoadAssetAtPath<Texture2D>("Assets/Sprites/cursor1.png");
+        }
+
+        public void UpdateSprite()
+        {
+            GetComponent<SpriteRenderer>().sprite = fixedSprite;
         }
     }
 }

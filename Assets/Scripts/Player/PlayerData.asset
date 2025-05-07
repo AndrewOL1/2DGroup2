@@ -12,13 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 968af496cbc0dd340a8b0a01a5f69e7a, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
-  groundedMoveSpeed: 6
-  maxSpeed: 5
-  gravity: 3
-  jumpForce: 5
-  maxJumpTime: 0.5
-  coyoteTime: 0.2
   interactionObject: {fileID: 0}
   lastCheckpoint: {x: 72.1, y: -3, z: 0}
-  RespawnTime: 2
-  IsDead: 0
+  itemSlots: []
+  id: 1
+  fixViolin: 1
+  openChest: 1

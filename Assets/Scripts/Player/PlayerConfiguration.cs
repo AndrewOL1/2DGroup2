@@ -18,5 +18,7 @@ namespace Player
         public InventoryItem[] itemSlots;
 
         [Header("ItemState")] public int id;
+        [Header("EndConditions")]
+        public bool fixViolin = false, openChest = false,fixClock=false;
     }
 }
