@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cog
       objectReference: {fileID: 0}
+    - target: {fileID: 5602120770144090958, guid: 38141263ba2c4744f953983148f3b554, type: 3}
+      propertyPath: ID
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5677051515416777024, guid: 38141263ba2c4744f953983148f3b554, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.14

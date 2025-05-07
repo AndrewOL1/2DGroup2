@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: UsedCog
   m_EditorClassIdentifier: 
   sentences:
-  - text: You dust the cog off and press it firmly back into its place on the clock,
+  - text: You clean the cog and press it firmly back into its place on the clock,
       It makes a satisfying clink as it shifts back into place and the clock begins
       to work once again. Moments later a key falls down and lands on the ground.
     speaker: {fileID: 11400000, guid: 4028f3f41069cdd46a994845bdd58d73, type: 2}

@@ -464,8 +464,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyID: 2
   dialogue: {fileID: 11400000, guid: 13e31e858b68c86498474b1b612e9d10, type: 2}
-  errorDialogue: {fileID: 11400000, guid: 89b448c5058a1974589bfa6ec004e332, type: 2}
-  key: {fileID: 0}
+  errorDialogue: {fileID: 11400000, guid: cb1dd557d731d5b4e895cfaf98750d8d, type: 2}
+  key: {fileID: 6874585682858646193, guid: 7f5bac1de7508264c961a3e1d015f9a0, type: 3}
   spawnItem: 0
   spawnPosition: {x: 0, y: 0, z: 0}
   _cursorTexture: {fileID: 0}
