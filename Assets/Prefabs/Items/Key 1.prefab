@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21afe04666113cf40bc0cfe6c3b82fbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 2
+  ID: 1
   Name: Key
   _cursorTexture: {fileID: 2800000, guid: 21cbdb598832d1e479d918b12ee89fe5, type: 3}
   Size: {x: 500, y: 500}

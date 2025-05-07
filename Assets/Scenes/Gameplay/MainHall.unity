@@ -350,7 +350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24e31b56f7f0b944297981cfc6aeebb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyID: 3
+  keyID: 2
   dialogue: {fileID: 11400000, guid: 485101a07ac9df14eade02e138220d2a, type: 2}
   errorDialogue: {fileID: 11400000, guid: 89b448c5058a1974589bfa6ec004e332, type: 2}
   key: {fileID: 6874585682858646193, guid: 7f5bac1de7508264c961a3e1d015f9a0, type: 3}
