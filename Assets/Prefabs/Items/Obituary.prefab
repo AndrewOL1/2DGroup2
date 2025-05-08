@@ -153,7 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnSceneEnter: 0
   OnInteract: 1
-  startingDialogue: {fileID: 11400000, guid: c46b0e22fb10d3048838b454a91310f5, type: 2}
+  startingDialogue: {fileID: 11400000, guid: 1abe99cd1715c4a49a4e9bf7bfd1749f, type: 2}
 --- !u!114 &6379898364856483647
 MonoBehaviour:
   m_ObjectHideFlags: 0
